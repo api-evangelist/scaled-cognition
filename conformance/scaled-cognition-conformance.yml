@@ -1,0 +1,64 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.scaledcognition.com/ai-info
+note: >-
+  Scaled Cognition publishes no machine-readable contract, so nothing here is derived from a spec.
+  Every entry below is asserted from a page the company itself serves, or recorded as unknown.
+standards:
+- id: soc2-type-ii
+  conforms: true
+  evidence:
+    claim: >-
+      "It can be deployed in Scaled Cognition's SOC 2 Type II certified cloud, within the customer's
+      VPC, or fully on-premises."
+    url: https://www.scaledcognition.com/ai-info
+    http_status: 200
+    verified: provider-published claim; the audit report itself is not public
+- id: rest
+  conforms: true
+  evidence:
+    claim: >-
+      "APT is available via a standard, stateless RESTful API" — described by Scaled Cognition as
+      open and vendor-agnostic.
+    url: https://www.scaledcognition.com/ai-info
+    http_status: 200
+- id: oauth2
+  conforms: unknown
+  evidence:
+    note: >-
+      No authorization-server metadata is served anonymously. /.well-known/oauth-authorization-server
+      on studio.scaledcognition.com 307-redirects to /login; on api.scaledcognition.com it 403s.
+- id: oidc
+  conforms: unknown
+  evidence:
+    note: /.well-known/openid-configuration returns 404 (www), 403 (api) and 307 to /login (studio).
+- id: rfc9457
+  conforms: unknown
+  evidence:
+    note: >-
+      Error envelope cannot be inspected without credentials. The one anonymous JSON error observed,
+      {"error":"Not authenticated."} from https://studio.scaledcognition.com/api/openapi.json, is a
+      bare object rather than application/problem+json — a single data point, not a policy.
+- id: iso27001
+  conforms: unknown
+  evidence:
+    note: >-
+      Not claimed on any public Scaled Cognition page. A Vanta-hosted trust center exists at
+      https://trust.scaledcognition.com but renders client-side, so its certification list cannot be
+      read without executing JavaScript.
+- id: hipaa
+  conforms: unknown
+  evidence:
+    note: >-
+      Healthcare is a marketed vertical (https://www.scaledcognition.com/industries/healthcare) but
+      no BAA or HIPAA attestation is published.
+domain_standards:
+- id: none-identified
+  conforms: false
+  evidence:
+    note: >-
+      REWARD-ONLY check, recorded as a miss rather than a penalty. Enterprise CX/contact-center has
+      candidate interchange standards (CPaaS/SIP, Genesys Open Messaging, MCP for tool access), but
+      Scaled Cognition declares none in a contract we can read — there is no contract to read. The
+      Genesys partnership (https://www.scaledcognition.com/blog/announcing-our-partnership-with-genesys)
+      implies conformance to Genesys integration shapes; nothing machine-readable states it.

@@ -1,0 +1,20 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.scaledcognition.com/product/explore-platform
+limit_count: 0
+rate_limits: []
+response_headers: []
+exhaustion_status: unknown
+note: >-
+  No rate limits are documented anywhere Scaled Cognition publishes. There is no developer portal,
+  API reference or docs host to carry them (docs.scaledcognition.com does not resolve), and the
+  platform API cannot be exercised anonymously to observe runtime headers: the Agent Builder API
+  answers 401 {"error":"Not authenticated."} and api.scaledcognition.com answers 403 from an AWS
+  ELB. An honest zero — checked, nothing published, not "not checked".
+evidence:
+- url: https://studio.scaledcognition.com/api/openapi.json
+  status: 401
+  finding: 'anonymous request returns {"error":"Not authenticated."} with no RateLimit-* headers'
+- url: https://api.scaledcognition.com/
+  status: 403
+  finding: AWS ELB refuses anonymous requests; no rate-limit headers observable

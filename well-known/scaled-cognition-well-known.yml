@@ -1,0 +1,67 @@
+generated: '2026-08-26'
+method: probed
+source: anonymous HTTP probes of /.well-known/* on every Scaled Cognition host in apis.yml
+note: >-
+  Nothing is served. Every /.well-known/ path probed on the three Scaled Cognition hosts missed:
+  the Webflow marketing site (www) returns a 404 "Invalid .well-known request" page for the whole
+  namespace, the API host (api.scaledcognition.com) answers 403 from an AWS ELB for every path
+  including the root, and the Agent Builder host (studio.scaledcognition.com) 307-redirects the
+  OAuth/api-catalog paths to /login while 404ing the rest. No WellKnown or SecurityTxt pointer is
+  emitted in apis.yml, because this file records an absence, not a served surface.
+hosts:
+- host: www.scaledcognition.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: api.scaledcognition.com
+  note: AWS ELB returns 403 Forbidden for every anonymous path, including /
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+  - path: /.well-known/agent-card.json
+    status: 403
+  - path: /.well-known/agent.json
+    status: 403
+- host: studio.scaledcognition.com
+  note: Next.js Agent Builder console; 307 responses are redirects to /login?next=...
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 307
+  - path: /.well-known/oauth-authorization-server
+    status: 307
+  - path: /.well-known/oauth-protected-resource
+    status: 307
+  - path: /.well-known/api-catalog
+    status: 307
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404

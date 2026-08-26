@@ -1,0 +1,27 @@
+generated: '2026-08-26'
+method: probed
+source: https://trust.scaledcognition.com
+trust_center:
+  present: true
+  url: https://trust.scaledcognition.com
+  http_status: 200
+  platform: Vanta Trust Center
+  ownership_evidence: >-
+    trust.scaledcognition.com is a CNAME to 66a3c59c17f6ad4ce8f7f32b.cname.vantatrust.com, a
+    per-tenant Vanta record published under a domain Scaled Cognition controls.
+  linked_from_site: false
+  linked_from_site_note: >-
+    The footer on scaledcognition.com carries a "Trust Center" item, but its anchor is href="#" and
+    it is styled with the class "hide" — the trust center is live and unlinked.
+  certifications:
+  - name: SOC 2 Type II
+    source: https://www.scaledcognition.com/ai-info
+    verified: provider-published claim on the company's own AI-info page
+  certifications_note: >-
+    The Vanta page renders entirely client-side (a 5.5KB shell that loads
+    index-trust-report-*.js), so its certification list, subprocessors and document-request flow
+    cannot be enumerated without executing JavaScript. The served HTML additionally carries a
+    cached canonical/meta block belonging to a different Vanta tenant, which is a Vanta shared-shell
+    artifact and NOT evidence about Scaled Cognition — no certification was read from it.
+  security_contact: hello@scaledcognition.com
+  security_contact_source: https://www.scaledcognition.com/contact

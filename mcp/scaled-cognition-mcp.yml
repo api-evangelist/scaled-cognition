@@ -1,0 +1,34 @@
+generated: '2026-08-26'
+method: probed
+source: anonymous probes of every Scaled Cognition host for an MCP endpoint
+status: none
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: >-
+  No MCP server — hosted or packaged — could be found. mcp.scaledcognition.com does not resolve;
+  /mcp on the Agent Builder host 307-redirects to /login and on the API host 403s; no @scaledcognition
+  or scaled-cognition package exists on npm or PyPI. No candidate tool list is derived either,
+  because there is no OpenAPI in this repo to derive one from — the platform contract is behind the
+  Studio login. No MCPServer pointer is emitted in apis.yml: this file records an absence.
+tools: []
+probes:
+- url: https://mcp.scaledcognition.com/
+  status: <no response>
+  finding: hostname does not resolve
+- url: https://studio.scaledcognition.com/mcp
+  status: 307
+  finding: redirects to /login?next=%2Fmcp
+- url: https://studio.scaledcognition.com/api/mcp
+  status: 401
+  finding: '{"error":"Not authenticated."}'
+- url: https://api.scaledcognition.com/mcp
+  status: 403
+  finding: AWS ELB Forbidden
+- url: https://registry.npmjs.org/-/v1/search?text=scaledcognition
+  status: 200
+  finding: zero packages
+- url: https://pypi.org/pypi/scaled-cognition/json
+  status: 404
+  finding: no PyPI project

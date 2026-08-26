@@ -1,18 +1,54 @@
 aid: scaled-cognition
 name: Scaled Cognition
-description: 'Scaled Cognition is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Scaled Cognition is a Mountain View, California AI model lab and enterprise platform company
+  behind APT-1, the Agentic Pretrained Transformer — a frontier model the company says is
+  pretrained on action prediction rather than token prediction and purpose-built for enterprise
+  customer-experience agents. The commercial surface is an Agent Builder platform (Studio, a Python
+  APT SDK, AgentTwin transcript-to-agent conversion, GenAPI simulation, Agent Evaluator, Agent
+  Monitor and Agent Defender) exposed to customers through a stateless RESTful API that can run in
+  Scaled Cognition's SOC 2 Type II cloud, in a customer VPC, or on-premises. Founded by Dan Roth
+  (CEO), Dan Klein (CTO, UC Berkeley) and Damon Pender (CFO), the team previously built Semantic
+  Machines, acquired by Microsoft in 2018. Backed by Khosla Ventures with a Genesys partnership.
+  No public developer portal, API reference, or machine-readable contract is published — the
+  platform API and its OpenAPI live behind the Studio login.
 url: https://raw.githubusercontent.com/api-evangelist/scaled-cognition/refs/heads/main/apis.yml
+image: https://cdn.prod.website-files.com/695bbfca07da756ac77e9b23/69f0d4e5f4a9f3085d8c4f7c_webclip.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
+- Artificial Intelligence
+- Agents
+- Large Language Models
+- Customer Experience
+- Contact Center
+- Conversational AI
+- Voice
+- Enterprise Software
+- Machine Learning
 - Company
-apis: []
+apis:
+- name: Scaled Cognition APT Agent Platform API
+  description: >-
+    The stateless RESTful API behind the Scaled Cognition Agent Builder platform, used to author,
+    simulate, deploy and monitor APT-1 agents. Scaled Cognition describes the interface publicly as
+    an open, vendor-agnostic, stateless REST API with no-code, low-code and Python SDK deployment
+    options, but publishes no public reference or machine-readable contract: the platform OpenAPI at
+    https://studio.scaledcognition.com/api/openapi.json answers 401 {"error":"Not authenticated."}
+    to an anonymous client, and https://api.scaledcognition.com/ answers 403 from an AWS ELB.
+  humanURL: https://www.scaledcognition.com/product/explore-platform
+  baseURL: https://api.scaledcognition.com
+  tags:
+  - Artificial Intelligence
+  - Agents
+  - Customer Experience
+  - Conversational AI
+  properties:
+  - type: Website
+    url: https://www.scaledcognition.com/product/explore-platform
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -20,4 +56,64 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://forgeglobal.com/scaled-cognition_stock/
+  url: https://www.scaledcognition.com
+- type: About
+  url: https://www.scaledcognition.com/about
+- type: Blog
+  url: https://www.scaledcognition.com/resources
+- type: StatusPage
+  url: https://status.scaledcognition.com
+- type: TrustCenter
+  url: https://trust.scaledcognition.com
+- type: Compliance
+  url: conformance/scaled-cognition-conformance.yml
+- type: Conformance
+  url: conformance/scaled-cognition-conformance.yml
+- type: Lifecycle
+  url: lifecycle/scaled-cognition-lifecycle.yml
+- type: DomainSecurity
+  url: security/scaled-cognition-domain-security.yml
+- type: LLMsTxt
+  url: llms/scaled-cognition-llms.txt
+- type: Plans
+  url: plans/scaled-cognition-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/scaled-cognition-rate-limits.yml
+- type: Login
+  url: https://studio.scaledcognition.com/login
+- type: TermsOfService
+  url: https://www.scaledcognition.com/terms-and-conditions
+- type: PrivacyPolicy
+  url: https://www.scaledcognition.com/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/ScaledCognition
+- type: LinkedIn
+  url: https://www.linkedin.com/company/scaledcognition/
+- type: Twitter
+  url: https://x.com/ScaledCognition
+- type: Careers
+  url: https://www.scaledcognition.com/careers
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 10
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    Scaled Cognition's Agent Builder API demonstrably ships an OpenAPI — https://studio.scaledcognition.com/api/openapi.json
+    answers 401 {"error":"Not authenticated."} rather than 404 — but every reference path on that host
+    307-redirects to /login, docs.scaledcognition.com does not resolve, api.scaledcognition.com 403s
+    every anonymous request from an AWS ELB, and the marketing site has no developer section at all,
+    so the contract is readable only by an existing tenant.
+  evidence:
+  - url: https://studio.scaledcognition.com/api/openapi.json
+    status: 401
+  - url: https://studio.scaledcognition.com/docs
+    status: 307
+  - url: https://api.scaledcognition.com/openapi.json
+    status: 403
+  - url: https://www.scaledcognition.com/openapi.json
+    status: 404
+  checked: '2026-08-26'

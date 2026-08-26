@@ -1,0 +1,62 @@
+generated: '2026-08-26'
+method: probed
+source: https://status.scaledcognition.com/api/v2/components.json
+status_page:
+  present: true
+  url: https://status.scaledcognition.com
+  platform: Atlassian Statuspage
+  page_id: g6br0n9gm49r
+  http_status: 200
+  components:
+  - name: API
+    status: operational
+    start_date: '2025-03-17'
+  - name: Agent Builder
+    status: operational
+    start_date: '2025-03-17'
+  machine_readable:
+  - url: https://status.scaledcognition.com/api/v2/summary.json
+    status: 200
+  - url: https://status.scaledcognition.com/api/v2/status.json
+    status: 200
+  - url: https://status.scaledcognition.com/api/v2/components.json
+    status: 200
+  feeds:
+  - url: https://status.scaledcognition.com/history.rss
+    status: 200
+  - url: https://status.scaledcognition.com/history.atom
+    status: 200
+  subscriptions:
+  - email
+  - slack
+  - microsoft-teams
+  - rss
+  - atom
+  observed_uptime: 100.0% over the trailing 90 days for both components, no incidents recorded
+versioning:
+  scheme: unknown
+  note: >-
+    No public versioning policy. The only version-shaped path observed anonymously is
+    https://studio.scaledcognition.com/api/v1/openapi.json, which returns 401 — implying a /api/v1
+    prefix on the platform API, but Scaled Cognition publishes no statement of it.
+deprecation:
+  policy_published: false
+  sunset_header: unknown
+  deprecation_header: unknown
+  note: >-
+    No deprecation or sunset policy is published on scaledcognition.com; the site has no developer
+    or changelog section. No Deprecation pointer is emitted.
+sla:
+  published: false
+  note: >-
+    No public SLA. Scaled Cognition sells enterprise contracts through a "Schedule a Demo" motion;
+    any availability commitment would be contractual rather than published.
+changelog:
+  published: false
+  note: >-
+    No dated changelog. The closest public surface is the resources/blog index at
+    https://www.scaledcognition.com/resources, which is editorial, not a release log.
+deprecated_operations: []
+note: >-
+  Derived only from probed public surfaces. There is no OpenAPI in this repo to derive deprecated
+  operations from — the platform contract is behind the Studio login.

@@ -1,0 +1,27 @@
+generated: '2026-08-26'
+method: searched
+source: registry.npmjs.org, pypi.org, github.com/ScaledCognition
+package_count: 0
+packages: []
+note: >-
+  Scaled Cognition markets an "APT SDK — engineering-grade control for technical teams. Script,
+  extend, and integrate agents in Python" on https://www.scaledcognition.com/product/explore-platform,
+  but that SDK is not published to any public registry and has no public source repository. The
+  github.com/ScaledCognition organization is real (created 2023-01-08, blog field set to
+  scaledcognition.com) and has zero public repositories. The SDK is presumably distributed to
+  customers alongside Agent Builder access; a public consumer cannot install it, and therefore cannot
+  read a version or a release date. No SDKs pointer is emitted — there is no installable client
+  library to point at.
+evidence:
+- url: https://registry.npmjs.org/-/v1/search?text=scaledcognition&size=10
+  status: 200
+  finding: no first-party package; results are unrelated string matches
+- url: https://pypi.org/pypi/scaled-cognition/json
+  status: 404
+- url: https://pypi.org/pypi/scaledcognition/json
+  status: 404
+- url: https://pypi.org/pypi/scaled-cognition-sdk/json
+  status: 404
+- url: https://api.github.com/orgs/ScaledCognition/repos
+  status: 200
+  finding: public_repos = 0

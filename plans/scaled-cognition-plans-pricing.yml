@@ -1,0 +1,17 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.scaledcognition.com/sitemap.xml
+plan_count: 0
+plans: []
+note: >-
+  Scaled Cognition publishes no pricing at all. The sitemap enumerates 22 unique English pages and
+  contains no /pricing, /plans or /purchase route, and every conversion path on the site is the same
+  "Schedule a Demo" form at https://www.scaledcognition.com/contact (200). This is an enterprise
+  contact-sales motion: no tiers, no quotas, no overage, no published unit of consumption.
+evidence:
+- url: https://www.scaledcognition.com/sitemap.xml
+  status: 200
+  finding: no pricing or plans URL present
+- url: https://www.scaledcognition.com/contact
+  status: 200
+  finding: '"Schedule a Demo" form is the only commercial entry point'
