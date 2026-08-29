@@ -13,6 +13,17 @@ description: >-
   No public developer portal, API reference, or machine-readable contract is published — the
   platform API and its OpenAPI live behind the Studio login.
 url: https://raw.githubusercontent.com/api-evangelist/scaled-cognition/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/695bbfca07da756ac77e9b23/69f0d4e5f4a9f3085d8c4f7c_webclip.png
 x-type: company
 x-source: harvest:secondary-market
