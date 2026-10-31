@@ -64,5 +64,102 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Scaled Cognition is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://forgeglobal.com/scaled-cognition_stock/
+Scaled Cognition is a Mountain View, California AI model lab and enterprise platform company behind APT-1, the Agentic Pretrained Transformer — a frontier model the company says is pretrained on action prediction rather than token prediction and purpose-built for enterprise customer-experience agents. The commercial surface is an Agent Builder platform (Studio, a Python APT SDK, AgentTwin transcript-to-agent conversion, GenAPI simulation, Agent Evaluator, Agent Monitor and Agent Defender) exposed to customers through a stateless RESTful API that can run in Scaled Cognition's SOC 2 Type II cloud, in a customer VPC, or on-premises. Founded by Dan Roth (CEO), Dan Klein (CTO, UC Berkeley) and Damon Pender (CFO), the team previously built Semantic Machines, acquired by Microsoft in 2018. Backed by Khosla Ventures with a Genesys partnership. No public developer portal, API reference, or machine-readable contract is published — the platform API and its OpenAPI live behind the Studio login.
+
+**Areas:** Artificial Intelligence · Agents · LLM · Customer Experience · Contact Center · Conversational AI · Voice · Enterprise Software · Machine Learning · Company
+
+## Scaled Cognition on APIs.io
+
+Everything profiled for Scaled Cognition is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/scaled-cognition/](https://apis.io/providers/scaled-cognition/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Scaled Cognition APT Agent Platform API](https://apis.io/apis/scaled-cognition/scaled-cognition-apt-agent-platform-api/) — The stateless RESTful API behind the Scaled Cognition Agent Builder platform, used to author, simulate, deploy and monitor APT-1 agents. Scaled Cognition…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Scaled Cognition Domain Security](https://apis.io/security/scaled-cognition/scaled-cognition-domain-security/)
+- [Scaled Cognition Trust Center](https://apis.io/security/scaled-cognition/scaled-cognition-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Scaled Cognition Plans Pricing](https://apis.io/plans/scaled-cognition/scaled-cognition-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Scaled Cognition Rate Limits](https://apis.io/rate-limits/scaled-cognition/scaled-cognition-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.scaledcognition.com)
+- [Blog](https://www.scaledcognition.com/resources)
+- [Trust centre](https://trust.scaledcognition.com)
+- [Terms of service](https://www.scaledcognition.com/terms-and-conditions)
+- [Privacy policy](https://www.scaledcognition.com/privacy-policy)
+- [GitHub](https://github.com/ScaledCognition)
+- [Status](https://status.scaledcognition.com)
+
+## API Evangelist rating
+
+**Kin Score 18.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 35.5 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 17.3** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/scaled-cognition/](https://apis.io/providers/scaled-cognition/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Scaled Cognition: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/scaled-cognition/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
